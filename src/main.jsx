@@ -8,7 +8,7 @@ import App from './app.jsx';
 
 
 // 创建 Redux 的 store 对象
-const store = finalCreateStore(reducer);
+//const store = finalCreateStore(reducer);
 render(
   <App/>,
   document.getElementById('root')

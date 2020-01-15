@@ -1,7 +1,8 @@
 import React from 'react'
 import {BrowserRouter as Router, Redirect,Route, Switch } from "react-router-dom";
-import Loadable from 'react-loadable'
-
+import Home from '@/page/home/index.jsx'
+import Mine from '@/page/home/mine.jsx'
+import Four from '@/page/404.jsx'
 
 /**
  * 组件异步加载装置 => react-loadable
@@ -17,19 +18,19 @@ const loadable = (filename) => Loadable({
 /**
  * 根路由集合
  */
-const rootRouters = [
-  {
-    //根路由匹配
-    path:'/',
-    exact:true,
-    component:() => <Redirect to='/home'/>
-  },
-  {
-    // 404 匹配
-    path:'*',
-    component:loadable('404')
-  }
-];
+// const rootRouters = [
+//   {
+//     //根路由匹配
+//     path:'/',
+//     exact:true,
+//     component:() => <Redirect to='/home'/>
+//   },
+//   {
+//     // 404 匹配
+//     path:'*',
+//     component:loadable('404')
+//   }
+// ];
 
 /**
  *  嵌套路由集合
@@ -42,21 +43,21 @@ const routers = [
   },
   {
     path:'/home',
-    component:loadable('home/index.jsx')
+    component:Home
   },
   {
     path:'/mine',
-    component:loadable('home/mine.jsx')
+    component:Mine
   },
   {
     // 404 匹配
     path:'*',
-    component:loadable('404')
+    component:Four
   }
 ];
 
 
 export {
-  rootRouters,
   routers,
 }
+

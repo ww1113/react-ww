@@ -8,7 +8,6 @@ import {
   withRouter,
 } from 'react-router-dom'
 import {
-  rootRouters,
   routers,
 } from '@/router/index.jsx'
 
