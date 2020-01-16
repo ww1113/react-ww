@@ -4,6 +4,6 @@
     "development": {
       "presets": [["@babel/preset-react", { "development": true }]]
     }
-  },
-  "plugins": ["syntax-dynamic-import"]
+  }
+//  "plugins": ["syntax-dynamic-import"]
 }

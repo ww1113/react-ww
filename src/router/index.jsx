@@ -8,10 +8,10 @@ import Four from '@/page/404.jsx'
  * 组件异步加载装置 => react-loadable
  * @param {String} filename
  */
-const loadable = (filename) => Loadable({
-  loader:() => import(`@/page/${filename}`),
-  loading:() => <div></div>
-});
+// const loadable = (filename) => Loadable({
+//   loader:() => import(`@/page/${filename}`),
+//   loading:() => <div></div>
+// });
 
 
 
@@ -39,7 +39,7 @@ const routers = [
   {
     // 404 匹配
     path:'/',
-    component:(null)
+    component:Home
   },
   {
     path:'/home',
