@@ -39,19 +39,23 @@ const routers = [
   {
     // 404 匹配
     path:'/',
+    exact:true,
     component:Home
   },
   {
     path:'/home',
+    exact:true,
     component:Home
   },
   {
     path:'/mine',
+    exact:true,
     component:Mine
   },
   {
     // 404 匹配
     path:'*',
+    exact:true,
     component:Four
   }
 ];

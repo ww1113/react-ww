@@ -13,7 +13,8 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, '../dist')
+    path: path.resolve(__dirname, '../dist'),
+    publicPath: '/'
   },
   mode: isDev,
   module: {
@@ -77,7 +78,9 @@ module.exports = {
     // 抽离css
     new ExtractTextPlugin('static/[name].min.css')
   ],
+  devtool:"eval-source-map",
   devServer: {
+    historyApiFallback: true,
     host: '127.0.0.1',
     port: 8080,
     proxy: {

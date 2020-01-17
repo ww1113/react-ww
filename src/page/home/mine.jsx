@@ -19,7 +19,7 @@ class Mine extends React.Component {
           }}
         />
         <div>
-          text
+          1234
         </div>
       </div>
     )
